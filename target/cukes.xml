@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="231.172">
+<testcase classname="user should be able to register" name="user register successfully" time="32.885">
+<system-out><![CDATA[When user click on register button..........................................passed
+And user fill personal details..............................................passed
+And user fill company details...............................................passed
+And user fill password......................................................passed
+And click on register button................................................passed
+Then user registration done.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="use able to login" name="user login with valid credentials" time="11.517">
+<system-out><![CDATA[When user click on login button.............................................passed
+And user enter "automation2@gmail.com" and "P@ssw0rd".......................passed
+Then user could login successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user could switch between currencies [$, €]" name="user could select euro" time="18.878">
+<system-out><![CDATA[When user choose euro currency..............................................passed
+Then euro selected successfully.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will be able to search for products with different parameters" name="user could search using product name" time="16.341">
+<system-out><![CDATA[When click on search field in home page.....................................passed
+And search for product "Apple"..............................................passed
+Then search result appear successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users will be able to search for products with different parameters" name="user could search using sku" time="15.716">
+<system-out><![CDATA[When click on search field in home page.....................................passed
+And search for product "AP_MBP_13"..........................................passed
+Then search result appear successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could hover categories and select sub category" name="user could hover categories" time="12.466">
+<system-out><![CDATA[When user hover category and select subcategory.............................passed
+Then subcategory page open successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user will be able to open sliders in home page" name="first slider are clickable" time="12.2">
+<failure message="expected [https://demo.nopcommerce.com/iphone_s6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user click on first slider.............................................passed
+Then product of first slider displayed......................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone_s6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinition.D06_homesSlider.firstSlide_displayed(D06_homesSlider.java:18)
+	at ✽.product of first slider displayed(file:///H:/demonopcommerce/src/main/resources/features/F06_homeSlider.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="user will be able to open sliders in home page" name="second slider are clickable" time="18.752">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user click on second slider............................................passed
+Then product of second slider displayed.....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinition.D06_homesSlider.secondSlide_displayed(D06_homesSlider.java:27)
+	at ✽.product of second slider displayed(file:///H:/demonopcommerce/src/main/resources/features/F06_homeSlider.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens facebook link" time="9.857">
+<system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens twitter link" time="10.473">
+<system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens news link" time="10.779">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens news link...................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at stepDefinition.D07_followUsStepDef.facebook_page(D07_followUsStepDef.java:20)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///H:/demonopcommerce/src/main/resources/features/F07_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens youtube link" time="14.594">
+<system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="user could add products to wishlist" name="success message is visible after adding product to wishlist" time="10.546">
+<system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could add products to wishlist" name="number of wishlist in homepage is increased" time="11.757">
+<system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+And user get the number of wishlist after adding product....................passed
+Then number of wishlist items increased.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could add products to shopping cart" name="success message is visible after adding product to shopping cart" time="11.488">
+<system-out><![CDATA[When user add product to shopping cart......................................passed
+Then shopping cart notification success is visible..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could add products to shopping cart" name="number of shopping cart in homepage is increased" time="11.308">
+<system-out><![CDATA[When user add product to shopping cart......................................passed
+Then shopping cart notification success is visible..........................passed
+And user get the number of shopping cart after adding product...............passed
+Then number of shopping cart items increased................................passed
+]]></system-out>
+</testcase>
+</testsuite>
